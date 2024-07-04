@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import rocks.zipcodewilmington.animals.Cat;
 import rocks.zipcodewilmington.animals.animal_storage.CatHouse;
+import rocks.zipcodewilmington.animals.animal_storage.DogHouse;
 
 import static org.junit.Assert.assertEquals;
 
@@ -14,6 +15,7 @@ public class CatHouseTest {
     // TODO - Create tests for `void add(Cat cat)`
     @Test
     public void addCatCat() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.add(cat);
 
@@ -30,7 +32,9 @@ public class CatHouseTest {
 
     @Test
     public void removeID() {
+        CatHouse.clear();
         Cat cat = new Cat();
+        CatHouse.add(cat);
         CatHouse.remove(cat.getId());
 
         Integer expected = 0;
@@ -44,7 +48,9 @@ public class CatHouseTest {
 
     @Test
     public void removeCat() {
+        CatHouse.clear();
         Cat cat = new Cat();
+        CatHouse.add(cat);
         CatHouse.remove(cat);
 
         Integer expected = 0;
@@ -59,6 +65,7 @@ public class CatHouseTest {
 
     @Test
     public void getCatByID() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.getCatById(0);
 
@@ -71,6 +78,7 @@ public class CatHouseTest {
     }
     @Test
     public void getNumberofCats() {
+        CatHouse.clear();
         Cat cat = new Cat();
         CatHouse.getNumberOfCats();
 

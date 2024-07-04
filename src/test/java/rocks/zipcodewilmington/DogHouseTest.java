@@ -19,6 +19,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)`
     @Test
     public void addDogDog() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.add(dog);
 
@@ -35,12 +36,14 @@ public class DogHouseTest {
 
     @Test
     public void removeID() {
+        DogHouse.clear();
         Dog dog = new Dog();
+        DogHouse.add(dog);
         DogHouse.remove(dog.getId());
 
         Integer expected = 0;
 
-        assertEquals(expected, DogHouse.getNumberOfDogs());
+        Assert.assertEquals(expected, DogHouse.getNumberOfDogs());
 
 
     }
@@ -49,7 +52,9 @@ public class DogHouseTest {
 
     @Test
     public void removeDog() {
+        DogHouse.clear();
         Dog dog = new Dog();
+        DogHouse.add(dog);
         DogHouse.remove(dog);
 
         Integer expected = 0;
@@ -78,6 +83,7 @@ public class DogHouseTest {
 
     @Test
     public void getDogByID() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.getDogById(0);
 
@@ -93,6 +99,7 @@ public class DogHouseTest {
     // TODO - Create tests for `Integer getNumberOfDogs()`
     @Test
     public void getNumberofDogs() {
+        DogHouse.clear();
         Dog dog = new Dog();
         DogHouse.getNumberOfDogs();
 
