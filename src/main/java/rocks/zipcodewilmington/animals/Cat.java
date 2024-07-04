@@ -10,7 +10,24 @@ public class Cat extends Mammal {
         super(name, birthDate, id);
     }
 
-    public String speak() {
-        return "meow!";
+    public Cat() {
+        super();
     }
+
+    public static void add(String billy) {
+
+    }
+
+    public String speak() {
+        return "Woof";
+    }
+
+    public void setName() {
+
+    }
+
+
+
+
+
 }
