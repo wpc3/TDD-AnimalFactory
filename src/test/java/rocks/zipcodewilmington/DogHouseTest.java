@@ -19,7 +19,7 @@ public class DogHouseTest {
     // TODO - Create tests for `void add(Dog dog)`
     @Test
     public void addDogDog() {
-        DogHouse.clear();
+        DogHouse.clear();//make sure to clear before running next test or it will be in the state of previous test
         Dog dog = new Dog();
         DogHouse.add(dog);
 
